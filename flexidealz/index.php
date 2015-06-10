@@ -30,7 +30,7 @@
      <?php 
 		require("config.php");
 		use DB\MySQL\Query as query;
- 		$users = new query("select * from Advertise");
+ 		$users = new query("select * from advertise");
  		$all_users = $users->fetch();
  		
  	  $i = 0;
@@ -49,7 +49,7 @@
             <div id = "inputs<?php print $i ?>" style="display: none;">
                 <input type="hidden" id="businessName" value="<?php print $user['businessName'] ?>">
                 <input type="hidden" id="name" value="<?php print $user['name']?>">
-			    <input type="hidden" id="address" value="<?php print $user[' address']?>">
+			    <input type="hidden" id="address" value="<?php print $user['address']?>">
                 <input type="hidden" id="contactNo" value="<?php print $user['contactNo'] ?>">
                 <input type="hidden" id="emailId" value="<?php print $user['emailId'] ?>"> 
                 <input type="hidden" id="service" value="<?php print $user['services']  ?>">
@@ -72,7 +72,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header"  style="background-color: #2ABB9B;">
-        <button type="button" class="close" id="close_modal" data-dismiss="modal" aria-hidden="true">×</button>
+        <button type="button" class="close" id="close_modal" data-dismiss="modal" aria-hidden="true">x</button>
         <h4 class="modal-title" style="color: white;">Information</h4>
       </div>
       <div class="modal-body"  style="color: black;">
@@ -114,15 +114,19 @@ function setModal(id){
 	$("#_address").html("<b>Address : </b>" + $("#_address").html());
 	// $("#_contact").text().split(",")[0]
 	
-	var contact_array = $("#_contactNo").text().split(",");
+	var contact_array = $("#_contactNo").text().trim().split(",");
 	//console.log($("#_contactNo").text());
 	var a_contact;
 	console.log(contact_array.length);
  	for(var i = 0; i < contact_array.length; i++) {
 	   // Trim the excess whitespace.
 	   // contact_array[i] = contact_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
-		a_contact = "<a href='tel:" + contact_array[i] + "'>" + contact_array[i] + "</a>";
-		a_contact = a_contact + ",<a href='tel:" + contact_array[i] + "'>" + contact_array[i] + "</a>";
+		
+		if(i >= 1){
+		 a_contact = a_contact + ",<a href='tel:" + contact_array[i] + "'>" + contact_array[i] + "</a>";
+		}else{
+		 a_contact = "<a href='tel:" + contact_array[i] + "'>" + contact_array[i] + "</a>";	
+		}
 	   // Add additional code here, such as:
 	   // console.log(contact_array[i]);
 	}

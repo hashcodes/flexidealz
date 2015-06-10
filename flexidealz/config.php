@@ -11,10 +11,10 @@ require $filepath;
 } 
  
 $DB_SETTINGS = array( 
- /*'host' => 'localhost',
+ /* 'host' => 'localhost',
  'database' => 'flexi2xl_flexi',
  'username' => 'flexi2xl_fdz',
- 'password' => 'flexiD'*/
+ 'password' => 'flexiD' */
  'host' => 'localhost',
  'database' => 'hashcode',
  'username' => 'root',
