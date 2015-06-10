@@ -1,30 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- HEADER -->
+
 <head>
 	<?php include 'fragments/headTag.php';?>
 </head>
 <body>
-	<div class="header">
-		<div class="container">
-			<a class="navbar-brand" href="index.html"><img
-				src="images/flexideals.png" class="img-responsive" alt="Flexi Dealz" /></a>
-			<div class="menu">
-				<a class="toggleMenu" href="javascript:void(0);"><img
-					src="images/nav_icon.png" alt="" data-toggle="modal"
-					data-target="#myModal" /> </a>
-				<ul class="nav" id="nav">
-					<li><a href="index.html">Home</a></li>
-					<li class="current"><a href="about.html">About Us</a></li>
-					<!-- <li><a href="services.html">Services</a></li> -->
-					<li><a href="contact.html">Contact Us</a></li>
+   <!-- HEADER -->
+   <?php include 'fragments/header.php'; ?>	 
 
-				</ul>
-				<script type="text/javascript" src="js/responsive-nav.js"></script>
-			</div>
-		</div>
-	</div>
-	<!-- <div class="about">
+<!-- <div class="about">
   <div class="container">
      
   </div>
@@ -177,29 +161,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer">
-		<div class="footer_bottom">
-			<div class="follow-us">
-				<a class="fa fa-facebook social-icon"
-					href="https://www.facebook.com/Flexidealz.in?ref=br_rs"
-					target="_blank" title="facebook"></a> <a
-					class="fa fa-twitter social-icon"
-					href="https://twitter.com/Flexideals" title="Twitter"
-					target="_blank"></a> <a class="fa fa-linkedin social-icon"
-					href="javascript:void(0);" target="_blank"></a> <a
-					class="fa fa-google-plus social-icon" href="javascript:void(0);"
-					target="_blank"></a>
-			</div>
-			<div class="copy">
-				<p>
-					Copyright &copy; 2015 Flexi Dealz. Design by <a
-						href="http://www.flexidealz.in" rel="nofollow">Flexi Dealz</a>
-					&nbsp;&nbsp;&nbsp; <a href="termsAndConditions.html"
-						title="Terms and Conditions">Terms and Conditions</a>
-				</p>
-			</div
-		</div>
-	</div>
+	<!-- FOOTER  -->
+    <?php include 'fragments/footer.php';?>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.flexslider.js"></script>
 </body>
