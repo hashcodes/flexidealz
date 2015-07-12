@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Update Your Ad | Grow Your Business Online With Us</title>
 	<?php include 'fragments/headTag.php';?>
 </head>
 <body>
@@ -17,10 +18,10 @@
 </div>
  -->
 <div class="main">
-<div class="content_white">
-  <h3>Update Ad</h3>  
-</div> 
-<div class="featured_content" id="feature">
+  <div class="content_white">
+    <h3>Update your ad</h3>  
+  </div> 
+  <div class="featured_content" id="feature">
   <div class="container">
       <div class="row">
        <div class="col-sm-3">
@@ -63,14 +64,14 @@
 		            <!-- <span class="help-block">Username is available</span> -->
 		        </div>
 		    </div>
-		    <div class="form-group has-error">
+		    <div class="form-group has-success">
 		        <label class="col-xs-2 control-label" for="inputSuccess">Email</label>
 		        <div class="col-xs-10">
-		            <input type="email" id="emailId" name="emailId" class="form-control" placeholder="Enter your email ids" value="<?php print $user['emailId'] ?>">
+		            <input type="text" id="emailId" name="emailId" class="form-control" placeholder="Enter your email ids" value="<?php print $user['emailId'] ?>">
 		            <!-- <span class="help-block">Please enter a valid email address</span> -->
 		        </div>
 		    </div>
-		    <div class="form-group has-error">
+		    <div class="form-group has-success">
 		        <label class="col-xs-2 control-label" for="inputSuccess">Image</label>
 		        <div class="col-xs-10">
 		            <input type="text" id="imagePath"  name="imagePath" class="form-control" placeholder="Enter your image name" value="<?php print $user['imagePath'] ?>">
@@ -113,7 +114,7 @@
         	 <div class="form-group">
         	   <div class="col-xs-offset-2 col-xs-10">
   				<button type="submit" id="submit" name="submit" class="btn btn-primary">Update changes</button>
-  				<button type="button" class="btn">Cancel</button>
+  				<a href="/listAdds.php" class="btn btn-danger">Cancel</a>
   			   </div>
 			</div>	
 		 </form>
@@ -125,7 +126,7 @@
      </div>
    </div>
 </div>
-
+</div>
 <!-- FOOTER -->   
  <?php include 'fragments/footer.php';?>
  

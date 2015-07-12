@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Add Your Business Here | Grow Your Business Online With Us</title>
 	<?php include 'fragments/headTag.php';?>
 </head>
 <body>
@@ -17,17 +18,17 @@
 </div>
  -->
 <div class="main">
-<div class="content_white">
+ <div class="content_white">
   <h3>Add Your Business</h3>  
-</div> 
-<div class="featured_content" id="feature">
+ </div> 
+ <div class="featured_content" id="feature">
   <div class="container">
       <div class="row">
-       <div class="col-sm-3">
+       <div class="col-sm-2">
          <!--Sidebar content-->
          <?php include 'fragments/leftAside.php';?>
        </div>
-       <div class="col-sm-9">
+       <div class="col-sm-10">
           <!--Body content-->
 		 <form class="form-horizontal" action="listAdds.php" method="POST" name="saveBusiness" id="saveBusiness">
 		    <div class="form-group has-success">
@@ -109,7 +110,7 @@
      </div>
    </div>
 </div>
-
+</div>
 <!-- FOOTER -->   
  <?php include 'fragments/footer.php';?>
  

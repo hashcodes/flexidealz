@@ -59,57 +59,58 @@ else
 
 <div class="main">
 <div class="content_white">
-  <h3>List of advertises</h3>  
+  <!-- <h3>List of advertises</h3> -->  
 </div> 
 <div class="featured_content" id="feature">
-  <div class="container">
+<!--   <div class="container"> -->
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-2">
          <!--Sidebar content-->
          <?php include 'fragments/leftAside.php';?>
        </div>
-       <div class="col-sm-9">
+       <div class="col-sm-10">
           <!--Body content-->
-          <table class="table table-hover">
-  		 <?php 
-		 /*		require("config.php");
-				use DB\MySQL\Query as query;
-		 */	
-  		   $users = new query("select * from advertise");
-				
-		   $all_users = $users->fetch();
-				
-		   foreach ($all_users as $user):
-		?>
-		<tr>
-		<?php 		
-			print "<td>" . $user['businessName'] . "</td>";
- 			print "<td>" . $user['name'] . " </td> ";
-			print "<td>" . $user['contactNo'] . "</td>  ";
-			print "<td>" . $user['emailId'] . "</td>  ";
-			print "<td>" . $user['address'] . "</td>  ";
-			print "<td>" . $user['imagePath'] . "</td>  ";
-			//print "<td>" . $user['products'] . " </td> ";
-			//print "<td>" . $user['description'] . "</td>  ";
-		?> 
-		
-		<!--  td>
-		  <a href="javascript:void(0);"  data-toggle="modal" data-target="#myModal" onclick="">delete</a>
-		</td-->
-		<td>
-		<form action="updateAd.php" method="POST">
-		  <input type="hidden" name="bizID" id="bizID" value="<?php print $user['bizid'] ?>"> 	
-		  <button type="submit" id="submit" name="submit" class="btn btn-primary">update</button>
-	    </form>
-		</td>
- 		<tr>
-		<?php 			 
-			endforeach;
-	  	?>
-	    </table>
-        </div>
+        <div class="panel-heading">List of advertises</div> 
+	        <table class="table" style="font-size: small;">
+	  		 <?php 
+			 /*		require("config.php");
+					use DB\MySQL\Query as query;
+			 */	
+	  		   $users = new query("select * from advertise order by bizid desc");
+					
+			   $all_users = $users->fetch();
+					
+			   foreach ($all_users as $user):
+			?>
+			<tr>
+			<?php 		
+				print "<td>" . $user['businessName'] . "</td>";
+	 			print "<td>" . $user['name'] . " </td> ";
+				print "<td>" . $user['contactNo'] . "</td>  ";
+				print "<td>" . $user['emailId'] . "</td>  ";
+				print "<td>" . $user['address'] . "</td>  ";
+				print "<td>" . $user['imagePath'] . "</td>  ";
+				//print "<td>" . $user['products'] . " </td> ";
+				//print "<td>" . $user['description'] . "</td>  ";
+			?> 
+			
+			<!--  td>
+			  <a href="javascript:void(0);"  data-toggle="modal" data-target="#myModal" onclick="">delete</a>
+			</td-->
+			<td>
+			<form action="updateAd.php" method="POST">
+			  <input type="hidden" name="bizID" id="bizID" value="<?php print $user['bizid'] ?>"> 	
+			  <button type="submit" id="submit" name="submit" class="btn btn-primary">update</button>
+		    </form>
+			</td>
+	 		<tr>
+			<?php 			 
+				endforeach;
+		  	?>
+		    </table>
+	     </div>
      </div>
-   </div>
+   <!-- </div> -->
 </div>     
 <!-- FOOTER -->   
  <?php include 'fragments/footer.php';?>

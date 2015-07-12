@@ -2,6 +2,7 @@
 <html lang="en">
 <!-- HEADER -->
 <head>
+	<title>About Us | Grow Your Business Online With Us</title>
 	<?php include 'fragments/headTag.php';?>
 </head>
 <body>
@@ -23,7 +24,7 @@
 
 					<h2>Our Vision</h2>
 					<h4>
-						<strong>From Society, For Society</strong>
+						<strong> For Society, From Society</strong>
 					</h4>
 					<br>
 					<h2>Our Mission</h2>

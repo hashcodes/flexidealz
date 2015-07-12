@@ -5,22 +5,7 @@
 	<?php include 'fragments/headTag.php';?>
 </head>
 <body>
-	<div class="header">
-		<div class="container">
-			<a class="navbar-brand" href="index.php"><img src="images/flexideals.png" class="img-responsive" alt="Flexi Dealz" /></a>
-			<div class="menu">
-				<a class="toggleMenu" href="javascript:void(0);">
-				<img src="images/nav_icon.png" alt="" data-toggle="modal" data-target="#myModal" /> </a>
-				<ul class="nav" id="nav">
-					<li class="current"><a href="index.php">Home</a></li>
-					<li class="current"><a href="about.html">About Us</a></li>
-					<!-- <li><a href="services.html">Services</a></li> -->
-					<li><a href="contact.html">Contact Us</a></li>
- 				</ul>
-				<script type="text/javascript" src="js/responsive-nav.js"></script>
-			</div>
-		</div>
-	</div>
+	 <?php include 'fragments/header.php'; ?>
 <!-- 
    <div class="about">
 		<div class="container">
@@ -30,17 +15,17 @@
 		</div>
    </div>
  -->
-<div class="about_content"><!-- style="background-image: url('images/bg.jpg');"  -->
+ <div class="about_content"><!-- style="background-image: url('images/bg.jpg');"  -->
       <div class="container">    
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
             <div class="panel panel-info" >
-              <div class="panel-heading">
-                  <div class="panel-title">Sign In</div>
-                  <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+              <div class="panel-heading" style="background: #2ABB9B;">
+                  <div class="panel-title" style="color: white;">Sign In</div>
+                  <!-- div style="color: white; float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div> -->
               </div>     
 
-      <div style="padding-top:30px" class="panel-body" >
-          <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+         <div style="padding-top:30px" class="panel-body" >
+            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
               <form id="loginform" class="form-horizontal" role="form">
                   <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -77,12 +62,58 @@
                     </form>     
                  </div>                     
             </div>  
-     </div>
-<div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      </div>
+     <form action="index.php" method=get>
+<h1 align="center" style="color:gray" >Welcome to this simple application</h1>
+<?php
+session_start(); 
+if( $_SESSION["logging"] && $_SESSION["logged"])
+{
+     print_secure_content();
+}
+else {
+    if(!$_SESSION["logging"])
+    {  
+      $_SESSION["logging"] = true;
+      loginform();
+    } else if($_SESSION["logging"]) {
+         $number_of_rows=checkpass();
+         if($number_of_rows==1) {	
+	         $_SESSION[user]=$_GET[userlogin];
+	         $_SESSION[logged]=true;
+	         print"<h1>you have loged in successfully</h1>";
+	         print_secure_content();
+            } else{
+               	print "wrong pawssword or username, please try again";	
+                loginform();
+            }
+        }
+     }
+     
+ 
+function checkpass()
+{
+$servername="localhost";
+$username="root";
+$conn=  mysql_connect($servername,$username)or die(mysql_error());
+mysql_select_db("test",$conn);
+$sql="select * from users where name='$_GET[userlogin]' and password='$_GET[password]'";
+$result=mysql_query($sql,$conn) or die(mysql_error());
+return  mysql_num_rows($result);
+}
+
+function print_secure_content()
+{
+	print("<b><h1>hi mr.$_SESSION[user]</h1>");
+    print "<br><h2>only a logged in user can see this</h2><br><a href='logout.php'>Logout</a><br>";	
+	
+}
+?>
+	<div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
          <div class="panel panel-info">
-             <div class="panel-heading">
-                 <div class="panel-title">Sign Up</div>
-                 <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+             <div class="panel-heading" style="background: #2ABB9B;">
+                 <div class="panel-title" style="color: white;">Sign Up</div>
+                 <div style="float:right; font-size: 85%; position: relative; top:-10px;"><a style="" id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
              </div>  
              <div class="panel-body" >
                  <form id="signupform" class="form-horizontal" role="form">
@@ -119,9 +150,9 @@
                      </div>
                          
                      <div class="form-group">
-                         <label for="icode" class="col-md-3 control-label">Invitation Code</label>
+                         <label for="icode" class="col-md-3 control-label">Confirm Password</label>
                          <div class="col-md-9">
-                             <input type="text" class="form-control" name="icode" placeholder="">
+                             <input type="text" class="form-control" name="confirm-passwd" placeholder="Confirm Password">
                          </div>
                      </div>
 
@@ -129,15 +160,14 @@
                          <!-- Button -->                                        
                          <div class="col-md-offset-3 col-md-9">
                              <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-                             <span style="margin-left:8px;">or</span>  
+                             <!--  <span style="margin-left:8px;">or</span>-->  
                          </div>
                      </div>
-                     
-                     <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+                      <!-- <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
                            <div class="col-md-offset-3 col-md-9">
                                <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
                            </div>                                           
-                    </div>
+                    </div> -->
                 </form>
              </div>
           </div>
