@@ -1,0 +1,2 @@
+[27-Jul-2015 05:52:48 Etc/GMT] PHP Warning:  move_uploaded_file(upload/kat.jpg): failed to open stream: No such file or directory in /home/flexi2xl/public_html/amittest/upload/upload-image.php on line 35
+[27-Jul-2015 05:52:48 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phprCz7gb' to 'upload/kat.jpg' in /home/flexi2xl/public_html/amittest/upload/upload-image.php on line 35

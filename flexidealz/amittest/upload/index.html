@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to create an image upload form without page refresh using Bootstrap, jQuery AJAX and PHP.">
+    <meta name="author" content="ShinDarth">
+
+    <title>Deool Band Selfie Contest</title>
+
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <style>body { padding-top:50px; }.navbar-inverse .navbar-nav > li > a { color: #DBE4E1; }</style>
+
+    <!--[if IE]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+        </div>
+
+        
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div style="max-width: 650px; margin: auto;">
+        <h1 class="page-header">Deool Band Selfie Contest</h1>
+        <p class="lead">Select a PNG or JPEG image, having maximum size <span id="max-size"></span> KB.</p>
+
+        <form id="upload-image-form" action="" method="post" enctype="multipart/form-data">
+          <div id="image-preview-div" style="display: none">
+            <label for="exampleInputFile">Selected image:</label>
+            <br>
+            <img id="preview-img" src="noimage">
+          </div>
+          <div class="form-group">
+            <input type="file" name="file" id="file" required>
+          </div>
+          <button class="btn btn-lg btn-primary" id="upload-button" type="submit" disabled>Upload image</button>
+          <br><br>
+          <p>Note: Selfie name should be in format <b>Yourname_Contact Number</b> <br>e.g. AmitMistry_94123355245 <span id="max-size"></span> KB.</p>
+
+<br><br>
+          <p class="lead">स्पर्धेचे नियम :</p>
+          <p>
+- तुमचा फोटो (selfie or groupie selfie) संपूर्ण नाव, मोबाईल क्र. व तिकीट क्र. पाठवा selfie.db@gmail.com वर email करा किंवा 'facebook दिंडोरी प्रणीत' वर message करा<br>
+- २० फोटो (selfie or groupie selfie) स्पर्धकांना देऊळ बंद चित्रपट गाण्यांची CD बक्षीस देण्यात येईल<br>
+- १० भाग्यवान विजेत्यांना मिळेल चित्रपटातील कलाकारांसोबत selfie घेण्याची संधी<br>
+- स्पर्धेचा कालावधी सोमवार सकाळी १०.३० ते बुधवार रात्रौ १२.०० वाजेपर्यंत राहील<br>
+- गुरुवार ३० जुलै संध्या ६.०० वाजता निकाल जाहीर केला जाईल<br>
+- तुमच्या फोटोसहीत कुपन क्र. पडताळणीसाठी कुपनचाही वेगळा फोटो पाठवावा<br>
+- ग्रुप फोटोमध्ये प्रत्येकाच्या हातात तिकीट असणे जरुरी असेल<br>
+- स्पर्धेचा निकाल जाहीर करण्याचे सर्व हक्क 'facebook दिंडोरी प्रणीत'कडे अबाधित राहतील<br>
+</p>
+        </form>
+
+        <br>
+        <div class="alert alert-info" id="loading" style="display: none;" role="alert">
+          Uploading image...
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+            </div>
+          </div>
+        </div>
+        <div id="message"></div>
+      </div>
+
+      
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="upload-image.js"></script>
+  </body>
+</html>
