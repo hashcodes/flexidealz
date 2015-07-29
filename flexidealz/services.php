@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Services | Flexi Dealz, For Society From Society</title>
 	<?php include 'fragments/headTag.php';?>
 </head>
 <body>

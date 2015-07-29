@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Flexi Dealz | Grow Your Business Online With Us</title>
+<title>Flexi Dealz | Grow Your Business Online With Us</title>
 	<?php include 'fragments/headTag.php';?>
 	<style type="text/css">
 		.zoom_img img{
@@ -39,21 +39,21 @@
     </center>
  -->
 <div class="main">
- <div class="featured_content" id="feature">
- <div class="container">
-   <!-- /.row style="top: 40px; position: fixed; z-index: 1;" -->		
-    <div class="row">
-  	<div class="col-sm-12">
+  <div class="content_white" style="padding: 10px;">
 	  <div class="col-sm-9">
-  	 <!-- 	 <a href="http://www.bigrock.in/web-hosting/?a_aid=5130f95bdf163&coupon=FEB35" target="_blank"> <img src="http://resources.bigrock.in/affiliate/banners/big-hosting-plan/HOSTING.png"/ class="img-responsive"></a> -->
+  		<a href="fd_deool_band/index.html" target="_blank" style="float: right; margin-right: 5px;">
+  			<img alt="Deool Band Marathi Movie" title="Deool Band Marathi Movie" src="images/banner_deool_band.jpg" class="img-responsive">
+  		</a>
    	  </div>
   	  <div class="col-sm-3">
-  	   <a href="http://goo.gl/forms/W3iPzxdEDL" target="_blank" style="float: left; margin-right: 5px;">
-  			<img alt="" src="images/offer.png"  class="img-responsive">
-  	   </a>
+  		<img alt="" src="images/offer.png"  class="img-responsive">
   	  </div> 	
-   </div>
-   <div class="col-sm-12" style="top: 54px;" >
+  </div> 
+<div class="featured_content" id="feature">
+ <div class="container">
+  <!-- /.row -->		
+  <div class="row">
+   <div class="col-sm-12">
    	<div class="col-sm-9">
 	 	      <?php 
 				require("config.php");
@@ -99,7 +99,7 @@
       </div>
       <!-- /.row --> 
      </div>
-   <div class="row">&nbsp;</div>
+    <div class="row">&nbsp;</div>
     <!--  --> 
 	 <div class="modal fade" id="myModal" tabindex="-1">
 	  <div class="modal-dialog">

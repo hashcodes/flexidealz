@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Contact | Grow Your Business Online With Us</title>
+        <title>Contact | Grow Your Business Online With Us</title>
 	<?php include 'fragments/headTag.php';?>
 </head>
 

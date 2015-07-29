@@ -6,17 +6,18 @@
  require("config.php");
  use DB\MySQL\Query as query;
  
-if($_GET["email"] && $_GET["firstname"] && $_GET["lastname"] && $_GET["passwd"] )
+/* if($_GET["email"] && $_GET["firstname"] && $_GET["lastname"] && $_GET["passwd"] )
 {
-	if($_GET["passwd"]==$_GET["confirm-passwd"])
+if($_GET["passwd"]==$_GET["confirm-passwd"])
 	{
-      $sql = "insert into user (firstName,lastName,email,password)values('$_GET[firstname]','$_GET[lastname]','$_GET[email]','$_GET[passwd]')";
+ */	
+      $sql = "insert into contest (name,contactNo,ticketNo,imagePath)values('$_POST[name]','$_POST[contactNo]','$_POST[ticketNo]','$_POST[imagePath]')";
       $result = new query($sql);  		
-      print "<h1>you have registered sucessfully</h1>";
-      print "<a href='index.php'>go to login page</a>";
-	}
+      print "<h1>you have registered sucessfully</h1><a href='index.php'>go to login page</a>";
+      //header("Location: contest.html?ya=done");
+     // print "<a href='index.html'>go to home page</a>";
+/* 	}
 	else print "passwords doesnt match";
-}
-else print"invaild input data";
-
+	 print"invaild input data";
+/* } */ 
 ?>

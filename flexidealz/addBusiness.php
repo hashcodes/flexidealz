@@ -18,10 +18,10 @@
 </div>
  -->
 <div class="main">
- <div class="content_white">
+<div class="content_white">
   <h3>Add Your Business</h3>  
- </div> 
- <div class="featured_content" id="feature">
+</div> 
+<div class="featured_content" id="feature">
   <div class="container">
       <div class="row">
        <div class="col-sm-2">
@@ -110,7 +110,7 @@
      </div>
    </div>
 </div>
-</div>
+
 <!-- FOOTER -->   
  <?php include 'fragments/footer.php';?>
  
