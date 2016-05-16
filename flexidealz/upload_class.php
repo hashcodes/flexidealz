@@ -353,4 +353,3 @@ class file_upload {
 		return $error[$err_num];
 	}
 }
-

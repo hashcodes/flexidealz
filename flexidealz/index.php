@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>Flexi Dealz | Grow Your Business Online With Us</title>
+<title>Flexi Deal | Grow Your Business Online With Us</title>
 	<?php include 'fragments/headTag.php';?>
 	<style type="text/css">
 		.zoom_img img{
@@ -41,9 +41,12 @@
 <div class="main">
   <div class="content_white" style="padding: 10px;">
 	  <div class="col-sm-9">
-  		<a href="fd_deool_band/index.html" target="_blank" style="float: right; margin-right: 5px;">
-  			<img alt="Deool Band Marathi Movie" title="Deool Band Marathi Movie" src="images/banner_deool_band.jpg" class="img-responsive">
+  		<a href="thecreatives.html" target="_blank" style="float: right; margin-right: 5px;">
+  			<img alt="The creatives mrunal arts" title="The creatives mrunal arts" src="images/the_creative_mrunal_arts.jpg" class="img-responsive">
   		</a>
+		<!-- BEGIN JS TAG - 728x90 < - DO NOT MODIFY -->
+			<!-- <SCRIPT SRC="http://ads.mangomediaads.com/ttj?id=5311005&cb=[CACHEBUSTER]&pubclick=[INSERT_CLICK_TAG]" TYPE="text/javascript"></SCRIPT> -->
+		<!-- END TAG -->
    	  </div>
   	  <div class="col-sm-3">
   		<img alt="" src="images/offer.png"  class="img-responsive">
@@ -90,12 +93,47 @@
 	 	   	?>	 	   	
    	  </div>
       <div class="col-sm-3">
+	    <!--    <a href="#" target="_blank"> <img src="images/nncdhol.jpg" class="img-responsive" alt ="Nanded City Dhol Pathak"/></a> -->
+      		<!-- BEGIN JS TAG - 300x250 < - DO NOT MODIFY -->
+		<div class="clearfix"> &nbsp; </div>
+		<SCRIPT SRC="http://ads.mangomediaads.com/ttj?id=5310998&cb=[CACHEBUSTER]&pubclick=[INSERT_CLICK_TAG]" TYPE="text/javascript"></SCRIPT>
+		<!-- END TAG -->
+		<div class="clearfix"> &nbsp; </div>
      	<iframe src='http://www.flipkart.com/affiliate/displayWidget?affrid=WRID-143629576681012596' frameborder=0 height=250 width=300></iframe>
+     	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     	<div class="clearfix"> &nbsp; </div>
+		<!-- Flexidealz_ROS_Responsive -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-2861323483402070"
+		     data-ad-slot="1971037943"
+		     data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
         <div class="clearfix"> &nbsp; </div>
      	<div data-WRID="WRID-143629617700754513" data-widgetType="featuredDeals"  data-class="affiliateAdsByFlipkart" height="250" width="300"></div><script async src="//affiliate-static.flixcart.com/affiliate/widgets/FKAffiliateWidgets.js"></script>
-        <div class="clearfix"> &nbsp; </div>	
+        <div class="clearfix"> &nbsp; </div>
+        <!-- BEGIN JS TAG - 2-300x250 < - DO NOT MODIFY -->
+		<SCRIPT SRC="http://ads.mangomediaads.com/ttj?id=5311012&cb=[CACHEBUSTER]&pubclick=[INSERT_CLICK_TAG]" TYPE="text/javascript"></SCRIPT>
+		<!-- END TAG -->	
+		<div class="clearfix"> &nbsp; </div>
      	<div data-WRID="WRID-143629627907878536" data-widgetType="relatedProducts"  data-class="affiliateAdsByFlipkart" height="250" width="300"></div><script async src="//affiliate-static.flixcart.com/affiliate/widgets/FKAffiliateWidgets.js"></script>
+      	<div class="clearfix"> &nbsp; </div>
+      	<!-- BEGIN JS TAG - 2-160x600 < - DO NOT MODIFY -->
+		<SCRIPT SRC="http://ads.mangomediaads.com/ttj?id=5311014&cb=[CACHEBUSTER]&pubclick=[INSERT_CLICK_TAG]" TYPE="text/javascript"></SCRIPT>
+		<!-- END TAG -->
+		<div class="clearfix"> &nbsp; </div>
+		<!-- BEGIN JS TAG - 2-300x250 < - DO NOT MODIFY -->
+		<SCRIPT SRC="http://ads.mangomediaads.com/ttj?id=5311012&cb=[CACHEBUSTER]&pubclick=[INSERT_CLICK_TAG]" TYPE="text/javascript"></SCRIPT>
+		<!-- END TAG -->		     	
+		<div class="clearfix"> &nbsp; </div>
       </div>
+      <!-- div class="col-sm-12">
+       <!-- BEGIN JS TAG - 2-728x90 < - DO NOT MODIFY  ->
+		 <SCRIPT SRC="http://ads.mangomediaads.com/ttj?id=5311013&cb=[CACHEBUSTER]&pubclick=[INSERT_CLICK_TAG]" TYPE="text/javascript"></SCRIPT>
+	   <!- END TAG  ->
+      </div -->
       </div>
       <!-- /.row --> 
      </div>

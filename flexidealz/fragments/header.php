@@ -5,18 +5,18 @@ if( window.canRunAds === undefined ){
 }
 </script>
 <div class="header">
-     <center style="margin-top: -18px">
+     <!-- center style="margin-top: -18px">
        <a style="color: #267A0C;">
         <img src="http://www.reliablecounter.com/count.php? page=flexidealz.in&digit=style/plain/23/&reloads=0" alt="Views" title="Views" border="0"> 
         Views
        </a> 
-     </center>
+     </center-->
      <div class="container">
       <a class="navbar-brand" href="index.php">
         <img class="img-responsive" src="images/flexideals.png" alt="Flexi Dealz"/>
       </a>
       <div class="menu"> 
-<!--       <a class="toggleMenu" href="javascript:void(0);"><img src="images/nav_icon.png" alt="Offer" /> </a> -->
+<!--  <a class="toggleMenu" href="javascript:void(0);"><img src="images/nav_icon.png" alt="Offer" /> </a> -->
       <!-- <ul class="nav" id="nav">
         <li class="current"><a href="index.php">Home</a></li>
         <li><a href="about.php">About Us</a></li>
